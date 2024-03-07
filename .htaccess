@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# Redirect requests for non-existent files without extension to the PHP file
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+?)/?$ $1.php [NC,L,QSA]
+
+# Serve PHP files without the extension
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+?)/?$ $1.php [NC,L,QSA]
+
+# Serve index.php as the default file for directories
+DirectorySlash Off
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/index\.php
+RewriteRule ^(.+)/?$ /index.php/$1 [L]
