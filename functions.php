@@ -58,7 +58,7 @@ function uploadImg() {
 
 // SHOW NEXT EVENT
 function showNextEvent() {
-    $NextEvent = query("SELECT * FROM nextevent");
+    $NextEvent = query("SELECT * FROM nextevent ORDER BY id DESC LIMIT 4");
     return $NextEvent;
 }
 

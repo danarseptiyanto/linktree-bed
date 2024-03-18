@@ -16,28 +16,33 @@
     <title>Link Belajar Era Digital</title>
 </head>
 <body>
+<div class="relative overflow-hidden">
+    <section class="relative inset-0">
+        <div class="absolute animate-[spin_8s_linear_infinite] right-0 w-1/3 border-b rounded-full -top-1/2 aspect-square border-[#196ECD]/20"></div>
+        <div class="absolute animate-[spin_6s_linear_infinite] right-0 w-1/2 border-b rounded-full -top-1/2 aspect-square border-[#196ECD]/20"></div>
+        <div class="absolute animate-[spin_4s_linear_infinite] right-0 w-2/3 border-b rounded-full -top-1/2 aspect-square border-[#196ECD]/20"></div>
+        <div class="absolute animate-[spin_2s_linear_infinite] right-0 w-full border-b rounded-full -top-1/2 aspect-square border-[#196ECD]/20"></div>
+    </section>
     <div class="md:max-w-[600px] max-w-[90%] mx-auto flex justify-between mt-9">
-        <a href="/" class="w-14 h-14 bg-[#196ECD] flex rounded-full justify-center items-center transition-transform transform-gpu hover:scale-105">
+        <a href="https://belajareradigital.com" class="w-14 h-14 bg-[#196ECD] flex rounded-full justify-center items-center transition-transform transform-gpu hover:scale-105">
             <img class="" src="assets/img/logo.png">
         </a>
         <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="w-14 h-14 bg-[#F1F1F1] flex rounded-full justify-center items-center transition-transform transform-gpu hover:scale-105">
             <i class="ri-menu-3-fill text-2xl text-[#196ECD]"></i>
         </button>
-        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-auto">
+        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-auto border me-8">
             <ul class="py-2" aria-labelledby="dropdownDefaultButton">
             <li>
-                <a href="#" class="block px-4 py-2 font-inter hover:bg-gray-100">Dashboard</a>
+                <a href="https://belajareradigital.com" class="block px-4 py-2 font-inter hover:bg-gray-100">Website Kami</a>
             </li>
             <li>
-                <a href="#" class="block px-4 py-2 font-inter hover:bg-gray-100">Settings</a>
-            </li>
-            <li>
-                <a href="#" class="block px-4 py-2 font-inter hover:bg-gray-100">Earnings</a>
-            </li>
-            <li>
-                <a href="#" class="block px-4 py-2 font-inter hover:bg-gray-100">Sign out</a>
+                <a href="https://linktr.ee/adminbed" class="block px-4 py-2 font-inter hover:bg-gray-100">Kontak BED</a>
             </li>
             </ul>
+            <div class="py-2">
+            <a href="admin/" class="block px-4 py-2 font-inter hover:bg-gray-100">Dashboard</a>
+                
+            </div>
         </div>
     </div>
     <div class="md:max-w-[600px] max-w-[90%] mx-auto text-center justify-between mt-9">
@@ -57,6 +62,10 @@
         <div id="extralarge-modal" tabindex="-1" class=" inset-0 bg-black bg-opacity-50 fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <iframe width="720" height="405" src="https://www.youtube.com/embed/PYXbZaGRmxI?mute=1" title="Profil Belajar Era Digital" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
+    </div>
+</div>
+    
+    <div class="md:max-w-[600px] max-w-[90%] mx-auto text-center justify-between mt-9">
         <div class="mb-8">
             <h3 class="font-inter font-bold mt-5 mb-3">Kegiatan Belajar Era Digital</h3>
             <?php foreach($linkResource as $resource) : ?>
@@ -70,9 +79,9 @@
         <div class="mb-8">
             <h3 class="font-inter font-bold mt-5 mb-4">Kegiatan Terdekat Kami</h3>
             <div class="grid grid-cols-2 gap-3">
-                <?php foreach(array_reverse($nextEvent) as $event) : ?>
+                <?php foreach($nextEvent as $event) : ?>
                 <a href="<?= $event["link"] ?>">
-                    <img class="rounded-lg md:rounded-2xl transition-transform transform-gpu hover:scale-105" src="assets/img/<?= $event["img"] ?>">
+                    <img class="rounded-lg md:rounded-2xl transition-transform transform-gpu hover:scale-105 aspect-[8/5] object-cover" src="assets/img/<?= $event["img"] ?>">
                     <p class="line-clamp-3 ... font-inter text-xs text-left md:text-sm my-1 md:my-2"><?= $event["title"] ?></p>
                 </a>
                 <?php endforeach ?>
@@ -99,7 +108,7 @@
             <?php endforeach ?>
         </div>
         <hr class="border-[#F1F1F1]">
-        <div class="flex justify-between mt-5 mb-6 items-baseline">
+        <div class="flex justify-between mb-9 mt-8 items-baseline">
             <a class="font-inter font-bold transition-colors duration-300 hover:text-[#196ECD]" href="http://BelajarEraDigital.com">BelajarEraDigital.com</a>
             <div class="flex gap-3">
                 <a target="_blank" href="https://instagram.com/belajarera.digital"><i class="text-xl transition-colors duration-300 hover:text-[#196ECD] ri-instagram-fill"></i></a>
